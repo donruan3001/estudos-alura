@@ -1,0 +1,25 @@
+import random
+
+print('bem vindo ao jogo da adivinhação ')
+
+numero_secreto = random.randint(0,1000)
+
+numero_de_tentativas = 5
+
+while numero_de_tentativas > 0:
+    chute = input('adivinhe qual o número secreto ')
+    chute = int (chute)
+
+    if numero_secreto > chute:
+        print('O seu chute foi maior que o numero secreto','tentativas')
+    elif numero_secreto < chute:
+      print('O seu chute foi menor que o numero secreto')
+    else:
+      print('Você acertou')
+      print('o numero secreto é ',numero_secreto)
+    break
+
+numero_de_tentativas=numero_de_tentativas-1
+
+if numero_de_tentativas==0:
+    print('você tem ',numero_de_tentativas,'tentativas')
